@@ -11,8 +11,8 @@ volumes:
 services:
 
   workspace:
-    build: ./workspace
-    image: wn1980/workspace${TAG}
+    build: ./image
+    image: wn1980/ros1-noetic${TAG}
     container_name: ros1_noetic
     init: true
     restart: unless-stopped
@@ -37,4 +37,4 @@ services:
       retries: 20
     ports:
       - "8558:8558"
-      - "9901:9901"
+      - "9903:9901"
